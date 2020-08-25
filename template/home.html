@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html >
+<!--From https://codepen.io/frytyler/pen/EGdtg-->
+<head>
+  <meta charset="UTF-8">
+  <title>ML API</title>
+  <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Hind:300' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+  
+</head>
+<style>
+body{
+     background-image:url("https://www.multiling.com/wp-content/uploads/2018/07/AdobeStock_177452394.jpeg");
+}
+</style>
+
+
+<body>
+ <div class="login">
+	<center>
+	<h1>Coronavirus Detector</h1>
+
+     <!-- Main Input For Receiving Query to our ML -->
+    <form action="{{ url_for('predict')}}"method="post">
+    	<b><input type="text" name="a" placeholder="Total WBC count" required="required" /><br><br>
+        <input type="text" name="b" placeholder="Neutrophils" required="required" /><br><br>
+	<input type="text" name="c" placeholder="Lymphocytes" required="required" /><br><br>
+        <input type="text" name="d" placeholder="Eosinophils" required="required" /><br><br>
+	<input type="text" name="e" placeholder="Monocytes" required="required" /><br><br>
+	<input type="text" name="f" placeholder="Basophils" required="required" /><br><br>
+	<input type="text" name="g" placeholder="Haemoglobin" required="required" /><br><br>
+	<input type="text" name="h" placeholder="Pcv" required="required" /><br><br>
+	<input type="text" name="i" placeholder="Red_Blood_Cell" required="required" /><br><br>
+	<input type="text" name="j" placeholder="Mcv" required="required" /><br><br>
+	<input type="text" name="k" placeholder="Mch" required="required" /><br><br>
+	<input type="text" name="l" placeholder="Mchc" required="required" /><br><br>
+	<input type="text" name="m" placeholder="platelet_count" required="required" /><br><br>
+	<input type="text" name="n" placeholder="Aspartate_aminotransferease" required="required" /><br><br>
+	<input type="text" name="o" placeholder="Alamine aminotransferease" required="required" /><br><br><br></b>
+        <button type="submit" class="btn btn-primary btn-block btn-large">Predict</button>
+    </form>
+  </center>
+
+   
+
+ </div>
+
+
+</body>
+</html>
