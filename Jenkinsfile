@@ -1,6 +1,10 @@
 
 pipeline {
     agent any
+    
+    environment {
+        NEW_VERSION ='1.3.0'
+    }
 
     stages {
         stage('build') {
@@ -9,8 +13,16 @@ pipeline {
             }
         }
        stage('test') {
+           when {
+               expression {
+                   BRANCH_NAME =='master'
+                   
+                   
+               }
+           }
             steps {
                 echo 'test stage.....'
+                echo "running in version ${env.NEW_VERSION}"
             }
         }
        stage('deploy') {
