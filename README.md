@@ -1,1 +1,1 @@
-# coronavirus-detector
+# coronavirus-detector.testing
